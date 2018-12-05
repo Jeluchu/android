@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Cafeteria</string>
+    <string name="complementos">Complementos</string>
+    <string name="nubes">Nubes</string>
+    <string name="caramelo">Caramelo</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="suma">+</string>
+    <string name="resta">-</string>
+    <string name="llamar">Llamar</string>
+    <string name="mapa">Mapa</string>
+    <string name="pedir">Pedir</string>
+    <string name="val_inicial">0</string>
+</resources>

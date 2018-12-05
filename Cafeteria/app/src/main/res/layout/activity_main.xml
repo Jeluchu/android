@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etName"
+        android:src="@drawable/logo"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvToppings"
+        android:buttonTint="@color/colorPrimary"
+        tools:targetApi="lollipop"
+        android:inputType="text"
+        android:maxLength="25"
+        android:maxLines="1"
+        />
+
+    <TextView
+        android:id="@+id/tvToppings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/complementos"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cbNubes"
+        />
+
+    <CheckBox
+        android:id="@+id/cbNubes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvToppings"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintRight_toLeftOf="@id/cbCaramelo"
+        app:layout_constraintBottom_toTopOf="@id/tvCantidad"
+        android:gravity="center"
+        android:text="@string/nubes"
+        android:buttonTint="@color/colorPrimary"
+        tools:targetApi="lollipop" />
+
+    <CheckBox
+        android:id="@+id/cbCaramelo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvToppings"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        app:layout_constraintLeft_toRightOf="@id/cbNubes"
+        app:layout_constraintBottom_toTopOf="@id/tvCantidad"
+        android:gravity="center"
+        android:text="@string/caramelo"
+        android:buttonTint="@color/colorPrimary"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/tvCantidad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/cantidad"
+        app:layout_constraintTop_toBottomOf="@id/cbNubes"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnSum"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnSum"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCantidad"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvTotal"
+        app:layout_constraintBottom_toTopOf="@id/ibPhone"
+        android:text="@string/resta"
+        android:onClick="btnResta"
+        />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/val_inicial"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvCantidad"
+        app:layout_constraintLeft_toRightOf="@+id/btnSum"
+        app:layout_constraintRight_toLeftOf="@+id/btnRest"
+        app:layout_constraintBottom_toTopOf="@id/ibPhone"
+        />
+
+    <Button
+        android:id="@+id/btnRest"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCantidad"
+        app:layout_constraintLeft_toRightOf="@+id/tvTotal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ibPhone"
+        android:text="@string/suma"
+        android:onClick="btnSuma"
+        />
+
+
+    <ImageButton
+        android:id="@+id/ibPhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_phone"
+        android:theme="@style/btnColorGreen"
+        app:layout_constraintTop_toBottomOf="@id/btnRest"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ibOrder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorPrimary"
+        android:text = "@string/llamar"
+        android:onClick="btnLlamada"
+        />
+
+    <ImageButton
+        android:id="@+id/ibOrder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_add_shopping_cart"
+        android:theme="@style/btnColorGreen"
+        app:layout_constraintTop_toBottomOf="@id/btnRest"
+        app:layout_constraintLeft_toRightOf="@+id/ibPhone"
+        app:layout_constraintRight_toLeftOf="@+id/ibLocation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorPrimary"
+        android:text = "@string/pedir"
+        android:onClick="btnOrder"
+        />
+
+    <ImageButton
+        android:id="@+id/ibLocation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_place"
+        android:theme="@style/btnColorGreen"
+        app:layout_constraintTop_toBottomOf="@id/btnRest"
+        app:layout_constraintLeft_toRightOf="@+id/ibOrder"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorPrimary"
+        android:text = "@string/mapa"
+        android:onClick="btnMaps"/>
+
+</android.support.constraint.ConstraintLayout>
