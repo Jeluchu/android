@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NavigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Navigation Drawer</string>
+    <string name="nav_header_subtitle">strings@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="camarita">Camarita</string>
+    <string name="galeria">Galería</string>
+    <string name="videos">Vídeos</string>
+    <string name="herramientas">Herramientas</string>
+    <string name="comunicacion">Comunicación</string>
+    <string name="compartir">Compartir</string>
+    <string name="enviar">Enviar</string>
+</resources>
